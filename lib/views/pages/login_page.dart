@@ -214,14 +214,8 @@ class _LoginPageState extends State<LoginPage> {
         child: ElevatedButton(
           style: style,
           onPressed: () {
-            Navigator.pushNamed(
-              context,
-              DetailPage.routeName,
-              arguments: ScreenArguments(
-                'Extract Arguments Screen',
-                'This message is extracted in the build method.',
-              ),
-            );
+            Navigator.push(
+                context, MaterialPageRoute(builder: (_) => DashboardPage()));
           },
           child: const Text(
             'Masuk',
