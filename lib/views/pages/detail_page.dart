@@ -122,7 +122,7 @@ class _DetailPageState extends State<DetailPage> {
               Navigator.pop(context);
             },
             icon: const Icon(
-              Icons.menu,
+              Icons.more_horiz,
               color: Colors.black,
             ),
           ),
@@ -132,7 +132,7 @@ class _DetailPageState extends State<DetailPage> {
             Navigator.pop(context);
           },
           icon: const Icon(
-            Icons.arrow_back_ios,
+            Icons.arrow_back,
             color: Colors.black,
           ),
         ),
