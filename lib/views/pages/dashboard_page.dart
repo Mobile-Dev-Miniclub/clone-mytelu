@@ -384,55 +384,67 @@ class _DashboardPageState extends State<DashboardPage> {
               ),
             ],
           ),
-          Container(
-            margin: EdgeInsets.symmetric(vertical: 8),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  children: [
-                    Container(
-                      width: 190,
-                      child: Text(
-                        "Larangan Mencegah & Wajib Berjilbab di Sekolah Memupus Intoleransi",
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 15),
-                      width: 190,
-                      child: Text(
-                        "6 jam yang lalu - Tirto.id",
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ),
-                  ],
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(
+                context,
+                DetailPage.routeName,
+                arguments: ScreenArguments(
+                  'Larangan Mencegah & Wajib Berjilbab di Sekolah Memupus Intoleransi',
+                  '6 jam yang lalu - Tirto.id',
                 ),
-                Container(
-                  height: 120,
-                  width: 120,
-                  child: Container(
-                    padding: EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(
-                        10,
-                      ),
-                      image: const DecorationImage(
-                        image: AssetImage(
-                          'assets/news.jpg',
+              );
+            },
+            child: Container(
+              margin: EdgeInsets.symmetric(vertical: 8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        width: 190,
+                        child: Text(
+                          "Larangan Mencegah & Wajib Berjilbab di Sekolah Memupus Intoleransi",
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
-                        fit: BoxFit.cover,
+                      ),
+                      Container(
+                        margin: EdgeInsets.symmetric(vertical: 15),
+                        width: 190,
+                        child: Text(
+                          "6 jam yang lalu - Tirto.id",
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    height: 120,
+                    width: 120,
+                    child: Container(
+                      padding: EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(
+                          10,
+                        ),
+                        image: const DecorationImage(
+                          image: AssetImage(
+                            'assets/news.jpg',
+                          ),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Container(
